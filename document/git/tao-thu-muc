@@ -1,0 +1,6 @@
+#mkdir
+```bash
+mkdir git
+cd git
+code .
+```
