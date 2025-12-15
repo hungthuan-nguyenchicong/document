@@ -1,4 +1,4 @@
-#mkdir
+# mkdir
 ```bash
 mkdir git
 cd git
