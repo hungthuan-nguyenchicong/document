@@ -18,3 +18,5 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer
 
 composer -v
+# update
+sudo composer self-update

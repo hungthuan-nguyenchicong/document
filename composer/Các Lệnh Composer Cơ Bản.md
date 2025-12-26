@@ -93,8 +93,13 @@ require __DIR__ . '/../../bootstrap.php';
 // ... code xử lý Web ...
 ```
 
-``bash
+```bash
 // api/index.php
 require __DIR__ . '/../bootstrap.php';
 // ... code xử lý API ...
+```
+
+# kiểm tra đã cài đặt chưa
+```bash
+composer global show laravel/installer
 ```
