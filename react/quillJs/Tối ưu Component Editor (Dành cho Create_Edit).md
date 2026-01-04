@@ -126,3 +126,42 @@ trait HasQuillContent
     }
 }
 ```
+## Cách 1: Đổ dữ liệu bằng Delta (Khuyên dùng cho Edit)
+### Trong component Editor.jsx
+```jsx
+// Khi khởi tạo Editor
+useEffect(() => {
+    // ... khởi tạo quill ...
+    
+    if (defaultValueRef.current) {
+        // defaultValue ở đây là Object Delta
+        quill.setContents(defaultValueRef.current);
+    }
+}, []);
+```
+### Trong trang EditPost.jsx
+```jsx
+export default function EditPost({ postFromLaravel }) {
+    // Giả sử Laravel trả về postFromLaravel.content_delta là một chuỗi JSON
+    const initialDelta = JSON.parse(postFromLaravel.content_delta);
+
+    return (
+        <Editor 
+            ref={quillRef} 
+            defaultValue={initialDelta} 
+        />
+    );
+}
+```
+## 2. Cách 2: Đổ dữ liệu bằng HTML (Dùng khi chỉ có HTML)
+### Trong component Editor.jsx
+```jsx
+useEffect(() => {
+    // ... khởi tạo quill ...
+
+    if (defaultValueRef.current) {
+        // Nếu defaultValue là chuỗi "<p>Chào</p>"
+        quill.clipboard.dangerouslyPasteHTML(defaultValueRef.current);
+    }
+}, []);
+```
