@@ -27,3 +27,5 @@ https://make.wordpress.org/cli/handbook/guides/quick-start/
 > wp core install --url=example.com --title="Tên Website" --admin_user=admin --admin_password=mat_khau_manh --admin_email=email@vi_du.com
 
 > wp server --port=8080
+
+>wp server --port=8000
