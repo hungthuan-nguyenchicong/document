@@ -22,6 +22,16 @@ https://make.wordpress.org/cli/handbook/guides/quick-start/
 
 > wp config create --dbname=wp_database --dbuser=wp_user --prompt=dbpass
 
+> wp db create
+
+> wp core install --url=localhost --title="WP-CLI" --admin_user=admin --admin_password=wpcli --admin_email=info@wp-cli.org
+
+# database
+> 49	upload_path	uploads
+
+> 56	upload_url_path	/uploads
+
+# tham khao
 > wp core install --url=wpclidemo.dev --title="WP-CLI" --admin_user=wpcli --admin_password=wpcli --admin_email=info@wp-cli.org
 
 > wp core install --url=example.com --title="Tên Website" --admin_user=admin --admin_password=mat_khau_manh --admin_email=email@vi_du.com
