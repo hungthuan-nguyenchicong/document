@@ -1,4 +1,5 @@
 # cài đặt
+
 https://github.com/vrana/adminer/releases/download/v5.4.1/adminer-5.4.1.php
 
 > sudo wget https://www.adminer.org/latest.php -O index.php
@@ -9,4 +10,4 @@ sudo curl -L https://github.com/vrana/adminer/releases/download/v5.4.1/adminer-5
 
 cd adminer
 
-php -S localhost:9000 index.php
+php -S 127.0.0.1:9000 index.php
